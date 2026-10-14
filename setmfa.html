@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>多要素認証のセットアップ - Microsoft アカウント</title>
+  <meta name="viewport" content="width=400, initial-scale=1">
+  <style>
+    body {
+      background: #f4f4f4;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .header, .footer {
+      background: #fff;
+      padding: 16px 0;
+      text-align: center;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .footer {
+      border-top: 1px solid #e5e5e5;
+      border-bottom: none;
+      margin-top: 48px;
+      color: #888;
+      font-size: 13px;
+    }
+    .container {
+      max-width: 400px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      padding: 32px 32px 24px 32px;
+    }
+    .logo {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    .ms-home {
+      color: #0067b8;
+      text-decoration: none;
+      font-size: 22px; /* ←大きめに変更 */
+      margin-left: 18px;
+      vertical-align: middle;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    h2 {
+      font-size: 22px;
+      color: #222;
+      margin: 0 0 16px 0;
+      font-weight: 400;
+    }
+    .method-selection {
+      background: #f3f9fd;
+      border: 1px solid #cce4fa;
+      border-radius: 5px;
+      padding: 16px;
+      margin-bottom: 24px;
+      font-size: 16px;
+      color: #222;
+      display: flex;
+      align-items: center;
+    }
+    .method-radio {
+      margin-right: 8px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 15px;
+      color: #333;
+    }
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      margin-bottom: 18px;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background: #0078d4;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    .btn:hover {
+      background: #005ea6;
+    }
+    .note {
+      color: #888;
+      font-size: 13px;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+    @media (max-width: 480px) {
+      .container { padding: 20px 5vw 16px 5vw; }
+      h2 { font-size: 18px; }
+      .ms-home { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- ヘッダー -->
+  <div class="header">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" width="110" class="logo">
+    <a href="https://www.microsoft.com/ja-jp/" class="ms-home">Microsoft</a>
+  </div>
+
+  <!-- メイン -->
+  <div class="container">
+    <h2>多要素認証のセットアップ</h2>
+    <div class="method-selection">
+      <input type="radio" checked disabled class="method-radio">
+      Microsoft Authenticator アプリ（推奨）
+    </div>
+    <form>
+      <label for="displayName">Authenticator に登録する名前</label>
+      <input type="text" id="displayName" name="displayName" autocomplete="username" required>
+      
+      <label for="email">メールアドレス</label>
+      <input type="email" id="email" name="email" autocomplete="email" required>
+      
+      <label for="password">パスワード</label>
+      <input type="password" id="password" name="password" autocomplete="current-password" required>
+      
+      <button type="submit" class="btn">次へ</button>
+    </form>
+    <p class="note">
+      この情報はアカウントの保護に使用されます。
+    </p>
+  </div>
+
+  <!-- フッター -->
+  <div class="footer">
+    © 2026 Microsoft Corporation. All rights reserved.<br>
+    <a href="https://privacy.microsoft.com/ja-jp" style="color:#888;">プライバシーに関する声明</a> | <a href="https://www.microsoft.com/ja-jp/servicesagreement/" style="color:#888;">利用規約</a>
+  </div>
+</body>
+</html>
