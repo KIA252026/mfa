@@ -32,19 +32,25 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.07);
       padding: 32px 32px 24px 32px;
     }
-    .logo {
+    .ms-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .ms-logo {
+      width: 38px;
+      height: 38px;
       display: inline-block;
       vertical-align: middle;
-      margin-right: 8px;
     }
-    .ms-home {
-      color: #0067b8;
-      text-decoration: none;
-      font-size: 22px;
-      margin-left: 18px;
+    .ms-text {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 30px;
+      font-weight: 400;
+      color: #666;
+      letter-spacing: -1px;
       vertical-align: middle;
-      font-weight: bold;
-      letter-spacing: 1px;
     }
     h2 {
       font-size: 22px;
@@ -104,15 +110,17 @@
     @media (max-width: 480px) {
       .container { padding: 20px 5vw 16px 5vw; }
       h2 { font-size: 18px; }
-      .ms-home { font-size: 18px; }
+      .ms-text { font-size: 18px; }
     }
   </style>
 </head>
 <body>
   <!-- ヘッダー -->
   <div class="header">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" width="110" class="logo">
-    <a href="https://www.microsoft.com/ja-jp/" class="ms-home">Microsoft</a>
+    <div class="ms-header">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="ms-logo">
+      <span class="ms-text">Microsoft</span>
+    </div>
   </div>
 
   <!-- メイン -->
